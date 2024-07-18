@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {currentUserNameQuery} from "../userAtoms";
+import {currentUserNameQuery} from "../atoms/userAtoms";
 
 const CurrentUserInfo = () => {
   const userName = useRecoilValue(currentUserNameQuery);

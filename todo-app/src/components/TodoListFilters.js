@@ -1,5 +1,5 @@
 import {useRecoilState} from "recoil";
-import {todoListFilterState} from "../todoAtoms";
+import {todoListFilterState} from "../atoms/todoAtoms";
 
 const TodoListFilters = () => {
   const [filter, setFilter] = useRecoilState(todoListFilterState)

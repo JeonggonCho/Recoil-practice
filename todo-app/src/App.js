@@ -1,6 +1,6 @@
 import './App.css';
 import TodoItemCreator from "./components/TodoItemCreator";
-import {filteredTodoListState} from "./todoAtoms";
+import {filteredTodoListState} from "./atoms/todoAtoms";
 import TodoItem from "./components/TodoItem";
 import {useRecoilValue} from "recoil";
 import TodoListFilters from "./components/TodoListFilters";
@@ -16,7 +16,7 @@ function App() {
       <Suspense fallback={<div>loading...</div>}>
         <CurrentUserInfo/>
       </Suspense>
-      
+
       <br/>
 
       <TodoListStats/>
