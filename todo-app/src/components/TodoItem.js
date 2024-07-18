@@ -1,5 +1,5 @@
 import {useRecoilState} from "recoil";
-import {todoListState} from "../TodoAtoms";
+import {todoListState} from "../todoAtoms";
 
 const TodoItem = ({item}) => {
   console.log(item)
