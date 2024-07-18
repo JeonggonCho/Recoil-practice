@@ -1,16 +1,18 @@
 import './App.css';
 import TodoItemCreator from "./components/TodoItemCreator";
-import {todoListState} from "./TodoAtoms";
+import {filteredTodoListState} from "./TodoAtoms";
 import TodoItem from "./components/TodoItem";
 import {useRecoilValue} from "recoil";
+import TodoListFilters from "./components/TodoListFilters";
 
 function App() {
-  const todoList = useRecoilValue(todoListState);
+  const filteredTodoList = useRecoilValue(filteredTodoListState);
 
   return (
-    <div className="App">
+    <div style={{textAlign: 'center', padding: 16}}>
       <TodoItemCreator/>
-      {todoList.map((todoItem) => (
+      <TodoListFilters/>
+      {filteredTodoList.map((todoItem) => (
         <TodoItem key={todoItem.id} item={todoItem}/>
       ))}
     </div>
